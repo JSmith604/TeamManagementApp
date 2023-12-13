@@ -3,7 +3,7 @@
 {% block content %}
   <div class="container">
     <h2>Delete Team Member</h2>
-    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <p>Are you sure you want to delete "{{ object.first_name }} {{ object.last_name }}"?</p>
     <form method="post">
       {% csrf_token %}
       <input type="submit" value="Confirm" class="btn confirm-btn">

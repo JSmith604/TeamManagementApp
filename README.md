@@ -54,7 +54,7 @@ python manage.py migrate
 
 `python manage.py runserver`
 
-Navigate to your localhost in your browser to view the application.
+Open a browser window and navigate to the development server
 
 ## Running Tests
 
