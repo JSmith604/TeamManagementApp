@@ -1,6 +1,6 @@
 
 from django.views.generic import ListView, CreateView
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView, DeleteView
 from django.shortcuts import render
 from .models import TeamMember
 from .forms import TeamMemberForm 
@@ -20,6 +20,11 @@ class TeamMemberUpdateView(UpdateView):
     form_class = TeamMemberForm
     template_name = 'team_management/team_member_form.html'  
     success_url = reverse_lazy('team_member_list')
+
+class TeamMemberDeleteView(DeleteView):
+    model = TeamMember
+    success_url = reverse_lazy('team_member_list') 
+    template_name = 'team_management/team_member_confirm_delete.html'  
 
 def home_view(request):
     context = {}

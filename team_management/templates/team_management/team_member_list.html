@@ -29,6 +29,8 @@
           <td>{{ member.get_role_display }}</td>
           <td>
             <a href="{% url 'team_member_edit' member.pk %}">Edit</a>
+            |
+            <a href="{% url 'team_member_delete' member.pk %}">Delete</a>
           </td>
         </tr>
       {% empty %}
