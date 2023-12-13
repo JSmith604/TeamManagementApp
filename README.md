@@ -14,8 +14,7 @@ To set up the project on your local machine, follow these steps:
 
 ### Clone the Repository
 
-git clone [Your Repository URL]
-cd [Your Repository Name]
+Use github `ssh` to clone the repository and `cd` into the top level directory of the project
 
 ### Set Up the Virtual Environment
 
@@ -26,14 +25,14 @@ pip install virtualenv
 virtualenv venv
 
 # Activate the virtual environment
-# On Windows
+### On Windows
 venv\Scripts\activate
-# On MacOS/Linux
+### On MacOS/Linux
 source venv/bin/activate
 
 ### Install Dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt```
 
 ### Environment Variables
 
@@ -53,13 +52,13 @@ python manage.py migrate
 
 ### Running the Server
 
-python manage.py runserver
+`python manage.py runserver`
 
-Navigate to `http://localhost:8000` in your browser to view the application.
+Navigate to your localhost in your browser to view the application.
 
 ## Running Tests
 
-python manage.py test
+`python manage.py test team_management` or `python manage.py test team_management -v 2` to see more detail
 
 ## Built With
 
