@@ -1,13 +1,11 @@
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Homepage</title>
-</head>
-<body>
-    <h1>Welcome to the Team Member Management App</h1>
-    <p>This is the homepage for the Team Member Management Application.</p>
-    <a href="{% url 'team_member_list' %}">View Team Members</a>
-</body>
-</html>
+{% block content %}
+    <div class="home-content">
+        <h1>Welcome to the Team Member Management App</h1>
+        <p>This is the homepage for the Team Member Management Application.</p>
+        <a href="{% url 'team_member_list' %}" class="view-btn">View Team Members</a>
+    </div>
+{% endblock %}
+
+

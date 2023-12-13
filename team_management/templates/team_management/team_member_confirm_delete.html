@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Delete Team Member</h2>
-  <p>Are you sure you want to delete "{{ object }}"?</p>
-  <form method="post">{% csrf_token %}
-    <input type="submit" value="Confirm">
-    <a href="{% url 'team_member_list' %}">Cancel</a>
-  </form>
+  <div class="container">
+    <h2>Delete Team Member</h2>
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" value="Confirm" class="btn confirm-btn">
+      <a href="{% url 'team_member_list' %}" class="btn cancel-btn">Cancel</a>
+    </form>
+  </div>
 {% endblock %}
+
