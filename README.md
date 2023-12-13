@@ -18,16 +18,16 @@ Use github `ssh` to clone the repository and `cd` into the top level directory o
 
 ### Set Up the Virtual Environment
 
-# Install virtualenv if it's not already installed
+#### Install virtualenv if it's not already installed
 pip install virtualenv
 
-# Create a virtual environment
+#### Create a virtual environment
 virtualenv venv
 
-# Activate the virtual environment
-### On Windows
+##### Activate the virtual environment
+###### On Windows
 venv\Scripts\activate
-### On MacOS/Linux
+###### On MacOS/Linux
 source venv/bin/activate
 
 ### Install Dependencies
