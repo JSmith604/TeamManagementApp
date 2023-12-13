@@ -46,4 +46,46 @@ class TeamMemberTests(TestCase):
         self.assertEqual(new_member.last_name, 'Smith')
         self.assertRedirects(response, self.list_url)
 
+    def test_team_member_edit_POST(self):
+        
+        team_member = TeamMember.objects.get(email='john.doe@example.com')
+        edit_url = reverse('team_member_edit', args=[team_member.id])
+
+        updated_data = {
+            'first_name': 'Johnathan',
+            'last_name': 'Doe',
+            'phone_number': '1234567890',
+            'email': 'john.doe@example.com',
+            'role': 'ADM'  
+        }
+
+        response = self.client.post(edit_url, updated_data)
+
+        team_member.refresh_from_db()
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(team_member.first_name, 'Johnathan')
+        self.assertEqual(team_member.role, 'ADM')
+        self.assertRedirects(response, self.list_url)
+
+    def test_team_member_delete_POST(self):
+        
+        team_member = TeamMember.objects.get(email='john.doe@example.com')
+
+        delete_url = reverse('team_member_delete', args=[team_member.id])
+
+        team_members_before_delete = TeamMember.objects.count()
+
+        response = self.client.post(delete_url)
+
+        team_members_after_delete = TeamMember.objects.count()
+
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(team_members_after_delete, team_members_before_delete - 1)
+        with self.assertRaises(TeamMember.DoesNotExist):
+            TeamMember.objects.get(email='john.doe@example.com')
+        self.assertRedirects(response, self.list_url)
+
+     
+
 
