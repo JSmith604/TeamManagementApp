@@ -8,8 +8,10 @@
 {% endblock extrahead %}
 
 {% block content %}
-  <h2>Team Members</h2>
+  
   <div class="container">
+  <h2>Team Members</h2>
+  <h3>You have {{ team_members.count }} team member{{ team_members.count|pluralize }}</h3>
   <a href="{% url 'team_member_add' %}" class="add-btn">Add Team Member</a>
   <table>
     <thead>

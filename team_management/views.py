@@ -9,7 +9,7 @@ from django.urls import reverse_lazy
 class TeamMemberListView(ListView):
     model = TeamMember
     template_name = 'team_management/team_member_list.html'
-
+    context_object_name = 'team_members'
 class TeamMemberCreateView(CreateView):
     form_class = TeamMemberForm
     template_name = 'team_management/team_member_form.html'
