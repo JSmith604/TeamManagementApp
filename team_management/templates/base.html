@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django App{% endblock title %}</title>
+    {% block extrahead %}{% endblock extrahead %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Django App</h1>
+        <nav>
+           
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'team_member_list' %}">Team Members</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Django App</p>
+    </footer>
+
+    {% block extrascripts %}{% endblock extrascripts %}
+</body>
+</html>
