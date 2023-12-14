@@ -13,10 +13,10 @@
     <header>
         <h1>My Django App</h1>
         <nav>
-           
             <ul>
+              {% if request.path != '/' %}
                 <li><a href="{% url 'team_member_list' %}">Team Members</a></li>
-               
+              {% endif %}
             </ul>
         </nav>
     </header>
