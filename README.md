@@ -19,20 +19,20 @@ Use github `ssh` to clone the repository and `cd` into the top level directory o
 ### Set Up the Virtual Environment
 
 #### Install virtualenv if it's not already installed
-pip install virtualenv
+`pip install virtualenv`
 
 #### Create a virtual environment
-virtualenv venv
+`virtualenv venv`
 
 ##### Activate the virtual environment
 ###### On Windows
-venv\Scripts\activate
+`venv\Scripts\activate`
 ###### On MacOS/Linux
-source venv/bin/activate
+`source venv/bin/activate`
 
 ### Install Dependencies
 
-`pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 ### Environment Variables
 
@@ -48,7 +48,7 @@ source venv/bin/activate
 
 ### Database Migrations
 
-python manage.py migrate
+`python manage.py migrate`
 
 ### Running the Server
 
