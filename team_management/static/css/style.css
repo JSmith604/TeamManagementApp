@@ -1,9 +1,9 @@
 .container {
   margin-left: auto;
-    margin-right: auto;
-    padding-left: 30px; 
-    padding-right: 30px; 
-    max-width: 1200px;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1200px;
 }
 
 .grid {
@@ -17,18 +17,7 @@ body {
   line-height: 1.6;
 }
 
-.add-btn {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-button, .btn {
+button, .btn, .add-btn, .view-btn {
   display: inline-block;
   background: #007bff;
   color: #fff;
@@ -40,53 +29,44 @@ button, .btn {
   line-height: 1.5;
   text-align: center;
   text-decoration: none; 
-  box-sizing: border-box; 
+  box-sizing: border-box;
   width: 150px; 
-  text-align: center;
 }
 
-.view-btn {
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-.add-btn:hover {
+button:hover, .btn:hover, .add-btn:hover, .view-btn:hover {
   background-color: #0056b3;
 }
 
+.add-btn {
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  margin-top: 20px;
+}
+
 .confirm-btn {
-  background-color: #dc3545; 
+  background-color: #dc3545;
 }
 
 .confirm-btn:hover {
-  background-color: #bd2130; 
+  background-color: #bd2130;
 }
 
 .cancel-btn {
-  background-color: #6c757d; 
+  background-color: #6c757d;
 }
 
 .cancel-btn:hover {
-  background-color: #5a6268; 
+  background-color: #5a6268;
 }
 
 input[type=text], input[type=email], input[type=tel], select {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 table {
@@ -106,6 +86,6 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 600px) {
   .grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
